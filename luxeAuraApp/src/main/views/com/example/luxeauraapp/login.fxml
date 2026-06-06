@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" minHeight="1080.0" minWidth="1920.0" spacing="20.0" style="-fx-background-color: #393D40;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.luxeauraapp.controllers.LoginController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <AnchorPane prefHeight="904.0" prefWidth="1880.0">
+      <children>
+         <AnchorPane layoutX="794.0" layoutY="255.0" prefHeight="483.0" prefWidth="429.0" style="-fx-background-radius: 12; -fx-background-color: #404448;">
+            <children>
+               <Button layoutX="48.0" layoutY="90.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="338.0" style="-fx-background-radius: 99; -fx-background-color: #ECD494;" text="Login with Google">
+                  <font>
+                     <Font name="Barlow Condensed Regular" size="12.0" />
+                  </font></Button>
+               <Text fill="WHITE" layoutX="156.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back!" wrappingWidth="128.87874603271484">
+                  <font>
+                     <Font name="Barlow Condensed Bold" size="22.0" />
+                  </font></Text>
+               <Line endX="31.33331298828125" layoutX="163.0" layoutY="151.0" startX="-100.0" stroke="WHITE" />
+               <Line endX="31.33331298828125" layoutX="345.0" layoutY="151.0" startX="-100.0" stroke="WHITE" />
+               <Text fill="WHITE" layoutX="214.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR" wrappingWidth="12.583297729492188">
+                  <font>
+                     <Font name="Barlow Condensed Medium Italic" size="12.0" />
+                  </font>
+               </Text>
+               <TextField fx:id="usernameField" layoutX="46.0" layoutY="189.0" prefHeight="30.0" prefWidth="338.0" text="admin" />
+               <PasswordField fx:id="passwordField" layoutX="46.0" layoutY="242.0" prefHeight="30.0" prefWidth="338.0" text="1234" />
+               <CheckBox layoutX="57.0" layoutY="290.0" mnemonicParsing="false" text="Remember Me" textFill="#f4de9b" />
+               <Text fill="#f4de9b" layoutX="261.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot password?" />
+               <Button layoutX="45.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="30.0" prefWidth="338.0" style="-fx-background-radius: 99; -fx-background-color: #ECD494;" text="Login">
+                  <font>
+                     <Font name="Barlow Condensed Regular" size="12.0" />
+                  </font>
+               </Button>
+               <Text fill="WHITE" layoutX="145.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account?" />
+               <Text fill="#f4de9b" layoutX="64.0" layoutY="415.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact us at ph.devaf@gmail.com and we will take care of everything!" textAlignment="CENTER" wrappingWidth="300.0" />
+            </children>
+         </AnchorPane>
+         <ImageView fitHeight="201.0" fitWidth="266.0" layoutX="883.0" layoutY="32.0">
+            <image>
+               <Image url="@../../../assets/images/favicon.png" />
+            </image>
+         </ImageView>
+      </children>
+   </AnchorPane>
+</VBox>

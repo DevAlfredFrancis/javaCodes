@@ -1,0 +1,10 @@
+Alf,22,IT,regular,2019
+Jake,33,HR,contractual,2025
+Paul,55,Manager,regular,2015
+Michel,22,HR,contractual,2024
+Celina,55,marketing,regular,2015
+Mandy,25,marketing,contractual,2023
+David,23,IT,regular,2019
+Raymond,23,IT,regular,2019
+Sonia,22,marketing,regular,2020
+Madonna,40,supervisor,regular,2015

@@ -1,0 +1,33 @@
+.button-transparent-bg {
+    -fx-background-color:  #ECD494;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-padding: 5 15;
+}
+
+.button-transparent-bg:hover {
+    -fx-background-color:  #ECD494;
+    -fx-text-fill: black;
+    -fx-padding: 5 15;
+}
+
+.button-outlined {
+    -fx-background-color: transparent;
+    -fx-border-color: #F4DE9B;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-text-fill: #F4DE9B;
+}
+
+.button-outlined:hover {
+    -fx-background-color: #F4DE9B; /* subtle hover */
+    -fx-text-fill: black;
+}
+
+/* Active / selected button */
+.button-transparent.active {
+    -fx-background-color: #F4DE9B; /* stays highlighted */
+    -fx-text-fill: black;
+}
+
+

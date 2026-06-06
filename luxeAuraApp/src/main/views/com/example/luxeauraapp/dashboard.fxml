@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane minHeight="1080.0" minWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.luxeauraapp.controllers.DashboardController">
+
+    <!-- SIDEBAR -->
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="865.0" prefWidth="200.0" spacing="10" style="-fx-background-color: #404448; -fx-padding: 20;">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                      <Image url="@../../../assets/images/favicon.png" />
+                   </image>
+                </ImageView>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Management System">
+                    <font>
+                        <Font name="Barlow Condensed Medium" size="12.0" />
+                    </font>
+                </Text>
+                <Line endX="100.0" startX="-100.0" stroke="WHITE" />
+                <Button fx:id="btnDashboard" onAction="#showDashboard" prefHeight="40.0" prefWidth="200.0" styleClass="button-transparent-bg" stylesheets="@../../../assets/css/dashboard.css" text="Dashboard">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="12.0" />
+               </font></Button>
+                <Button fx:id="btnServices" onAction="#showSalonServices" prefHeight="40.0" prefWidth="200.0" styleClass="button-transparent-bg" stylesheets="@../../../assets/css/dashboard.css" text="Salon Services">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="12.0" />
+               </font></Button>
+                <Button fx:id="btnBookings" onAction="#showBookings" prefHeight="40.0" prefWidth="200.0" styleClass="button-transparent-bg" stylesheets="@../../../assets/css/dashboard.css" text="Bookings">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="12.0" />
+               </font></Button>
+                <Button fx:id="btnCustomers" prefHeight="40.0" prefWidth="200.0" styleClass="button-transparent-bg" stylesheets="@../../../assets/css/dashboard.css" text="Customer">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="12.0" />
+               </font></Button>
+                <Button fx:id="btnSales" prefHeight="40.0" prefWidth="200.0" styleClass="button-transparent-bg" stylesheets="@../../../assets/css/dashboard.css" text="Sales">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="12.0" />
+               </font></Button>
+            <Button fx:id="btnSales2" prefHeight="40.0" prefWidth="200.0" styleClass="button-transparent-bg" stylesheets="@../../../assets/css/dashboard.css" text="Logout">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="12.0" />
+               </font>
+            </Button>
+
+            </children>
+        </VBox>
+    </left>
+
+    <!-- CONTENT -->
+    <center>
+        <StackPane prefHeight="676.0" prefWidth="1400.0" style="-fx-background-color: #ecf0f1;">
+            <children>
+                <Label style="-fx-font-size: 26px;" text="Dashboard Overview" />
+            <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #212121;">
+                     <children>
+                        <AnchorPane layoutX="22.0" layoutY="159.0" prefHeight="200.0" prefWidth="272.0" style="-fx-background-color: #404448; -fx-background-radius: 12;">
+                           <children>
+                              <Text fill="WHITE" layoutX="21.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Clients">
+                                 <font>
+                                    <Font name="Barlow Condensed SemiBold" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children></AnchorPane>
+                        <AnchorPane layoutX="332.0" layoutY="159.0" prefHeight="200.0" prefWidth="272.0" style="-fx-background-color: #404448; -fx-background-radius: 12;">
+                           <children>
+                              <Text fill="WHITE" layoutX="20.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender">
+                                 <font>
+                                    <Font name="Barlow Condensed SemiBold" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children></AnchorPane>
+                        <AnchorPane layoutX="633.0" layoutY="159.0" prefHeight="432.0" prefWidth="568.0" style="-fx-background-color: #404448; -fx-background-radius: 12;">
+                           <children>
+                              <Text fill="WHITE" layoutX="20.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Bookings">
+                                 <font>
+                                    <Font name="Barlow Condensed SemiBold" size="30.0" />
+                                 </font>
+                              </Text>
+                           </children></AnchorPane>
+                        <AnchorPane layoutX="19.0" layoutY="21.0" prefHeight="111.0" prefWidth="1630.0" style="-fx-background-color: #393D40; -fx-background-radius: 12;">
+                           <children>
+                              <Label layoutX="41.0" layoutY="41.0" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Overview" textFill="WHITE">
+                                 <font>
+                                    <Font name="Bauhaus 93" size="48.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox accessibleRole="CONTEXT_MENU" layoutX="169.0" layoutY="48.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="22.0" layoutY="395.0" prefHeight="200.0" prefWidth="272.0" style="-fx-background-color: #404448; -fx-background-radius: 12;">
+                           <children>
+                              <Text fill="WHITE" layoutX="19.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Services">
+                                 <font>
+                                    <Font name="Barlow Condensed SemiBold" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children></AnchorPane>
+                        <AnchorPane layoutX="332.0" layoutY="395.0" prefHeight="200.0" prefWidth="272.0" style="-fx-background-color: #404448; -fx-background-radius: 12;">
+                           <children>
+                              <Text fill="WHITE" layoutX="17.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Treatments">
+                                 <font>
+                                    <Font name="Barlow Condensed SemiBold" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children></AnchorPane>
+                        <AnchorPane layoutX="23.0" layoutY="621.0" prefHeight="400.0" prefWidth="1180.0" style="-fx-background-color: #404448; -fx-background-radius: 12;">
+                           <children>
+                              <Text fill="WHITE" layoutX="16.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stylists">
+                                 <font>
+                                    <Font name="Barlow Condensed SemiBold" size="30.0" />
+                                 </font>
+                              </Text>
+                           </children></AnchorPane>
+                        <AnchorPane layoutX="1231.0" layoutY="159.0" prefHeight="860.0" prefWidth="416.0" style="-fx-background-color: #404448; -fx-background-radius: 12;">
+                           <children>
+                              <Text fill="WHITE" layoutX="18.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upcoming Bookings">
+                                 <font>
+                                    <Font name="Barlow Condensed SemiBold" size="30.0" />
+                                 </font>
+                              </Text>
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane minHeight="1080.0" minWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.luxeauraapp.controllers.SalonServicesController">
+
+    <!-- SIDEBAR -->
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="865.0" prefWidth="200.0" spacing="10" style="-fx-background-color: #404448; -fx-padding: 20;">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../assets/images/favicon.png" />
+                    </image>
+                </ImageView>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Management System">
+                    <font>
+                        <Font name="Barlow Condensed Medium" size="12.0" />
+                    </font>
+                </Text>
+                <Line endX="100.0" startX="-100.0" stroke="WHITE" />
+                <Button fx:id="btnDashboard" onAction="#showDashboard" prefHeight="40.0" prefWidth="200.0" styleClass="button-transparent-bg" stylesheets="@../../../assets/css/dashboard.css" text="Dashboard" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="12.0" />
+               </font></Button>
+                <Button fx:id="btnServices" prefHeight="40.0" prefWidth="200.0" styleClass="button-transparent-bg" stylesheets="@../../../assets/css/dashboard.css" text="Salon Services" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="12.0" />
+               </font></Button>
+                <Button fx:id="btnBookings" onAction="#showBookings" prefHeight="40.0" prefWidth="200.0" styleClass="button-transparent-bg" stylesheets="@../../../assets/css/dashboard.css" text="Bookings" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="12.0" />
+               </font></Button>
+                <Button fx:id="btnCustomers" prefHeight="40.0" prefWidth="200.0" styleClass="button-transparent-bg" stylesheets="@../../../assets/css/dashboard.css" text="Customer" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="12.0" />
+               </font></Button>
+                <Button fx:id="btnSales" prefHeight="40.0" prefWidth="200.0" styleClass="button-transparent-bg" stylesheets="@../../../assets/css/dashboard.css" text="Sales" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="12.0" />
+               </font></Button>
+            <Button fx:id="btnSales1" prefHeight="40.0" prefWidth="200.0" styleClass="button-transparent-bg" stylesheets="@../../../assets/css/dashboard.css" text="Logout">
+               <font>
+                  <Font name="Barlow Condensed Medium" size="12.0" />
+               </font>
+            </Button>
+            </children>
+        </VBox>
+    </left>
+
+    <!-- CONTENT -->
+    <center>
+        <StackPane prefHeight="676.0" prefWidth="1400.0" style="-fx-background-color: #ecf0f1;">
+            <children>
+                <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="767.0" prefWidth="1398.0" style="-fx-background-color: #212121;">
+                            <children>
+                        <AnchorPane layoutX="19.0" layoutY="21.0" prefHeight="111.0" prefWidth="1630.0" style="-fx-background-color: #393D40; -fx-background-radius: 12;">
+                           <children>
+                                      <Label layoutX="41.0" layoutY="41.0" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Manage Services" textFill="WHITE">
+                                 <font>
+                                    <Font name="Bauhaus 93" size="48.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+
+                                <TableView fx:id="servicesTable" layoutX="21.0" layoutY="193.0" prefHeight="728.0" prefWidth="1630.0">
+                                    <columns>
+                                        <TableColumn fx:id="colServiceName" prefWidth="206.99996948242188" text="Service Name" />
+                                        <TableColumn fx:id="colCategory" prefWidth="232.0" text="Category" />
+                                        <TableColumn fx:id="colDescription" prefWidth="594.0" text="Description" />
+                                        <TableColumn fx:id="colDuration" prefWidth="240.0" text="Duration (minutes)" />
+                                        <TableColumn fx:id="colPrice" minWidth="0.0" prefWidth="153.0" text="Price (Peso)" />
+                                        <TableColumn fx:id="actionsColumn" prefWidth="203.0" text="Actions" />
+                                    </columns>
+                                </TableView>
+                                <Pagination fx:id="pagination" layoutX="801.0" layoutY="938.0" pageCount="3" />
+                        <Button fx:id="btnAddService" layoutX="25.0" layoutY="146.0" mnemonicParsing="false" onAction="#openAddServiceModal" prefHeight="35.0" prefWidth="150.0" stylesheets="@../../../assets/css/dashboard.css" text="ADD SERVICE" textAlignment="CENTER" textFill="#f4de9b">
+                           <font>
+                              <Font name="Barlow Condensed SemiBold" size="12.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="button-transparent-bg" />
+                              <String fx:value="button-outlined" />
+                           </styleClass>
+                        </Button>
+                        <TextField layoutX="1294.0" layoutY="143.0" prefHeight="35.0" prefWidth="355.0" promptText="Search" />
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>
